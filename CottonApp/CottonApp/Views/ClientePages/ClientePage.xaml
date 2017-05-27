@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CottonApp.Views.ClientePage"
+             Title="Cadastrar Cliente">
+
+    <StackLayout Padding="40, 70, 40, 0" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+        <Entry x:Name="Nome" Placeholder="Nome Completo do Cliente"></Entry>
+        <Entry x:Name="Email" Placeholder="Email Ex: emailcliente@cliente.com" Keyboard="Email"></Entry>
+        <Entry x:Name="Login" Placeholder="Login Ex: fabioecher"></Entry>
+        <Entry x:Name="Senha" Placeholder="Senha" IsPassword="True"></Entry>
+        <Entry x:Name="ConfirmarSenha" Placeholder="Confirmar Senha" IsPassword="True"></Entry>
+        
+        <Button x:Name="Salvar" Text="Salvar" Style="{StaticResource button-save}" Clicked="SalvarClicked"></Button>
+
+        <ListView x:Name="Lista">
+        </ListView>
+    </StackLayout>
+</ContentPage>

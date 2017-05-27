@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CottonApp.Views.Cliente.EditarPerfilPage"
+             Title="Editar Perfil">
+
+    <ScrollView>
+        <StackLayout Padding="40, 20, 40, 0" Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
+            <Entry x:Name="Nome" Placeholder="Nome Completo do Cliente"></Entry>
+            <Entry x:Name="Telefone" Placeholder="Tel: (XX) XXXXX-XXXX"></Entry>
+            <Entry x:Name="CPF" Placeholder="CPF" Keyboard="Numeric"></Entry>
+            <Entry x:Name="Logradouro" Placeholder="Logradouro"></Entry>
+            <Entry x:Name="Bairro" Placeholder="Bairro"></Entry>
+            <Entry x:Name="Numero" Placeholder="Número" Keyboard="Numeric"></Entry>
+            <Entry x:Name="Cidade" Placeholder="Cidade"></Entry>
+            <Entry x:Name="CEP" Placeholder="CEP"></Entry>
+            <Entry x:Name="UF" Placeholder="UF"></Entry>
+
+            <Button x:Name="Salvar" Text="Salvar" Style="{StaticResource button-save}" Clicked="SalvarClicked"></Button>
+
+            <ListView x:Name="Lista">
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

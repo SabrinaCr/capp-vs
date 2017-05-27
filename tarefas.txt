@@ -1,0 +1,32 @@
+>> Gerenciar Cliente
+>> validações
+ - se existe algum cliente com o mesmo login
+ - na interface de cadastro, adicionar entry para confirmar senha
+
+23-05 FOCO NO CLIENTE E NO LOGIN
+-- 
+-- arrumar interface
+
+>>-------------------------
+>>    Tela Inicial
+>>-------------------------
+- Fazer tela de Boas-Vindas ou Algo do tipo
+- Naquela master que fica em branco, acrescentar os menus
+
+
+>> ------------------------
+>>   Clientes e Login
+>>-------------------------
+- Controle de Sessão para Cliente não logar toda hora
+- Ajustar tela de Cadastro
+- Fazer Validações
+  - tá cadastrando cliente nulo, não pode
+- se existe algum cliente com o mesmo login
+- na interface de cadastro, adicionar entry para confirmar senha
+
+- Alterar Informações do Cliente
+- Cliente deve ser único; validaçãos para constraint unique
+
+>> Algumas Verificações:
+- dá pra ver o 
+- se o usuário já logou, oculta o cadastro de cliente

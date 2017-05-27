@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CottonApp.Master"
+             Title="Master"
+             Icon="menu.png"
+             BackgroundColor="#8fd08f">
+    
+    <!-- Master é o Menu Lateral -->
+    <StackLayout>
+        <ListView x:Name="ItemsMenuLateral" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="20">
+                            <Label Text="{Binding Titulo}" TextColor="White" Font="Large"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <!--<Button x:Name="ButtonCadCliente" Text="Cadastro Cliente" Style="{StaticResource button-menu-lateral}"></Button>-->
+        <!--<Button x:Name="ButtonCadFazenda" Text="Cadastro Fazenda" Style="{StaticResource button-menu-lateral}"></Button>
+        <Button x:Name="ButtonCadTalhao" Text="Cadastro Talhão" Style="{StaticResource button-menu-lateral}"></Button>-->
+    </StackLayout>
+    
+</ContentPage>

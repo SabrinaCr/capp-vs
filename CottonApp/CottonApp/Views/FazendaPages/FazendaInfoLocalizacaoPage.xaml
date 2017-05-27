@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CottonApp.Views.FazendaPages.FazendaInfoLocalizacaoPage"
+             Title="Informações de Localização">
+    <StackLayout Padding="20, 70, 20, 0" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+        <Entry x:Name="Bairro" Placeholder="Bairro"></Entry>
+        <Entry x:Name="Cidade" Placeholder="Cidade"></Entry>
+        <Entry x:Name="UF" Placeholder="UF"></Entry>
+
+        <Button x:Name="Salvar" Text="Salvar" Style="{StaticResource button-save}" Clicked="ProximoClicked"/>
+    </StackLayout>
+</ContentPage>

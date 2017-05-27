@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CottonApp.App">
+	<Application.Resources>
+
+		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+            
+            <!-- Color Header Bar -->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#8fd08f"/>
+                <Setter Property="BarTextColor" Value="Color.White"/>
+            </Style>
+
+            <!-- Button Save Style -->
+            <Style x:Key="button-save" TargetType="Button">
+                <Setter Property="BorderColor" Value="Blue"/>
+                <Setter Property="TextColor" Value="#ffffff"/>
+                <Setter Property="BackgroundColor" Value="#60BD60"/>
+                <!--<Setter Property="BorderWidth" Value="10"/>-->
+                <!--<Setter Property="BorderRadius" Value="-20"/>-->
+            </Style>
+
+            <!-- Button Delete Style -->
+            <Style x:Key="button-delete" TargetType="Button">
+                <Setter Property="TextColor" Value="#ffffff"/>
+                <Setter Property="BackgroundColor" Value="#E82929"/>
+            </Style>
+
+            <!-- Button Edit Style -->
+            <Style x:Key="button-edit" TargetType="Button">
+                <Setter Property="TextColor" Value="#ffffff"/>
+                <Setter Property="BackgroundColor" Value="#294BC5"/>
+            </Style>
+
+            <!-- Button Warning Style -->
+            <Style x:Key="button-warning" TargetType="Button">
+                <Setter Property="TextColor" Value="#ffffff" />
+                <Setter Property="BackgroundColor" Value="#FFAE19"/>
+            </Style>
+
+            <!-- Button Menu Lateral Style -->
+            <Style x:Key="button-menu-lateral" TargetType="Button">
+                <Setter Property="BorderRadius" Value="20"/>
+                <Setter Property="TextColor" Value="#293546" />
+                <Setter Property="BackgroundColor" Value="#ffffff"/>
+            </Style>
+        </ResourceDictionary>
+
+	</Application.Resources>
+</Application>
