@@ -3,12 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CottonApp.Views.FazendaPages.FazendaInfoContatoPage"
              Title="Informações de Contato">
-    <StackLayout Padding="20, 70, 20, 0" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
-        <Entry x:Name="Email" Placeholder="Email" Keyboard="Email"/>
-        <Entry x:Name="EnderecoWeb" Placeholder="Endereço Web"/>
-        <Entry x:Name="Telefone" Placeholder="Telefone" Keyboard="Telephone"/>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="LabelInformacoesContato" Style="{StaticResource label-dados-pessoais}" Text="      Informações de Contato"></Label>
+            <StackLayout Padding="20, 70, 20, 10" Spacing="20">
+                <Entry x:Name="Email" Placeholder="Email" Keyboard="Email"/>
+                <Entry x:Name="EnderecoWeb" Placeholder="Endereço Web"/>
+                <Entry x:Name="Telefone" Placeholder="Telefone" Keyboard="Telephone"/>
 
-        <Button x:Name="Salvar" Text="Salvar" Style="{StaticResource button-save}" Clicked="SalvarClicked"/>
-    </StackLayout>
-    
+                <Button x:Name="Salvar" Text="Salvar" Style="{StaticResource button-save}" Clicked="SalvarClicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

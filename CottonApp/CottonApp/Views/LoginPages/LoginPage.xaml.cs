@@ -1,4 +1,8 @@
-﻿using CottonApp.ViewModels;
+﻿using CottonApp.Models;
+using CottonApp.Services;
+using CottonApp.ViewModels;
+using CottonApp.Views.ClientePages;
+using CottonApp.Views.HomePage;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,31 +18,32 @@ namespace CottonApp.Views.LoginPages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
+        private LoginViewModel ViewModel => BindingContext as LoginViewModel;
+        private Cliente _clienteTela;
+
         public LoginPage()
         {
             InitializeComponent();
 
+            var cottonAppApiService = DependencyService.Get<ICottonAppApiService>();
+            BindingContext = new LoginViewModel(cottonAppApiService);
+
+            //ViewModel.InsertClienteCommand.Execute(this.Registrar);
             Registrar.GestureRecognizers.Add(new TapGestureRecognizer
             {
+                //Command = new Command(() => ViewModel.InsertClienteCommand.Execute(Registrar))
                 Command = new Command(() => OnLabelClicked()),
             });
         }
 
-        public async void EntrarClicked(object sender, EventArgs e)
+        public void Button_OnEntrarClicked(object sender, EventArgs e)
         {
-            var clienteTela = new Models.Cliente();
-            clienteTela.Login = this.Login.Text;
-            clienteTela.Senha = this.Senha.Text;
+            _clienteTela = new Cliente();
+            _clienteTela.Login = this.Login.Text;
+            _clienteTela.Email = this.Login.Text;
+            _clienteTela.Senha = this.Senha.Text;
 
-            var clienteBanco = ClienteVM.RecuperaClienteLoginEmail(clienteTela);
-
-            if (clienteBanco != null && clienteTela.Senha.Equals(clienteBanco.Senha))
-            {
-                // faz login -- chama tela principal
-                await this.Navigation.PushAsync(new HomePage());
-            }
-            else
-                await DisplayAlert("Erro", "Login ou Senha Incorretos", "OK");
+            ViewModel.LoginCommand.Execute(_clienteTela);
         }
 
         public void OnLabelClicked()
@@ -48,3 +53,14 @@ namespace CottonApp.Views.LoginPages
         }
     }
 }
+
+//var clienteBanco = ViewModel.RecuperaClienteLoginEmail(clienteTela);
+
+//if (clienteBanco != null && clienteTela.Senha.Equals(clienteBanco.Senha))
+//{
+//    // faz login -- chama tela principal
+//    await this.Navigation.PopToRootAsync(); // testar
+//    await App.Current.MainPage.Navigation.PushAsync(new HomePage.HomePage());
+//}
+//else
+//    await DisplayAlert("Erro", "Login ou Senha Incorretos", "OK");

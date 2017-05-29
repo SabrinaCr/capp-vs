@@ -65,7 +65,7 @@ namespace CottonApp.Models
             set;
         }
 
-        [MaxLength(10)]
+        [MaxLength(15)]
         public String CEP
         {
             get;

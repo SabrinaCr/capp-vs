@@ -3,11 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CottonApp.Views.FazendaPages.FazendaInfoLocalizacaoPage"
              Title="Informações de Localização">
-    <StackLayout Padding="20, 70, 20, 0" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
-        <Entry x:Name="Bairro" Placeholder="Bairro"></Entry>
-        <Entry x:Name="Cidade" Placeholder="Cidade"></Entry>
-        <Entry x:Name="UF" Placeholder="UF"></Entry>
-
-        <Button x:Name="Salvar" Text="Salvar" Style="{StaticResource button-save}" Clicked="ProximoClicked"/>
-    </StackLayout>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="LabelInformacoesLocalizacao" Style="{StaticResource label-dados-pessoais}" Text="      Informações de Localização"></Label>
+            <StackLayout Padding="20, 70, 20, 10" Spacing="20">
+                <Entry x:Name="Bairro" Placeholder="Bairro"></Entry>
+                <Entry x:Name="Cidade" Placeholder="Cidade"></Entry>
+                <Entry x:Name="UF" Placeholder="UF"></Entry>
+            </StackLayout>
+            <Button x:Name="Salvar" Text="Próximo" Style="{StaticResource button-save}" Clicked="ProximoClicked"/>
+        </StackLayout>
+        
+        
+    </ContentPage.Content>
+    
 </ContentPage>

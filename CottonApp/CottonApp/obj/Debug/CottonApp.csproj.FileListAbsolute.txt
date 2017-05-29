@@ -23,7 +23,7 @@ D:\_Estágio\Xamarin\CottonApp\CottonApp\CottonApp\obj\Debug\CottonApp.Views.Faz
 D:\_Estágio\Xamarin\CottonApp\CottonApp\CottonApp\obj\Debug\CottonApp.Views.FazendaPages.FazendaInfoLocalizacaoPage.xaml.g.cs
 D:\_Estágio\Xamarin\CottonApp\CottonApp\CottonApp\obj\Debug\CottonApp.Views.LoginPages.LoginPage.xaml.g.cs
 D:\_Estágio\Xamarin\CottonApp\CottonApp\CottonApp\obj\Debug\CottonApp.Views.HomePage.HomePage.xaml.g.cs
-D:\_Estágio\Xamarin\CottonApp\CottonApp\CottonApp\obj\Debug\CottonApp.dll.mdb
-D:\_Estágio\Xamarin\CottonApp\CottonApp\CottonApp\bin\Debug\CottonApp.dll.mdb
+D:\_Estágio\Xamarin\CottonApp\CottonApp\CottonApp\obj\Debug\CottonApp.Views.FazendaPages.FazendaListaPage.xaml.g.cs
+D:\_Estágio\Xamarin\CottonApp\CottonApp\CottonApp\obj\Debug\CottonApp.Views.FazendaPages.UpdateFazendaPage.xaml.g.cs
 D:\_Estágio\Xamarin\CottonApp\CottonApp\CottonApp\obj\Debug\CottonApp.dll.mdb
 D:\_Estágio\Xamarin\CottonApp\CottonApp\CottonApp\bin\Debug\CottonApp.dll.mdb

@@ -1,4 +1,6 @@
 ﻿using CottonApp.Models;
+using CottonApp.Services;
+using CottonApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,27 +15,32 @@ namespace CottonApp.Views.FazendaPages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FazendaInfoLocalizacaoPage : ContentPage
     {
-        Fazenda _fazenda;
+        private FazendaInfoLocalizacaoViewModel ViewModel => BindingContext as FazendaInfoLocalizacaoViewModel;
 
-        public FazendaInfoLocalizacaoPage()
-        {
-            InitializeComponent();
-        }
+        public Cliente _cliente;
+        public Fazenda _fazenda;
 
         public FazendaInfoLocalizacaoPage(Fazenda fazenda)
         {
             InitializeComponent();
             _fazenda = fazenda;
+
+            var cottonAppApiService = DependencyService.Get<ICottonAppApiService>();
+            BindingContext = new FazendaInfoLocalizacaoViewModel(fazenda); // _cliente
         }
 
-        public async void ProximoClicked()
+        public void ProximoClicked()
         {
-            _fazenda.Cidade = this.Cidade.Text;
-            _fazenda.Bairro = this.Bairro.Text;
-            _fazenda.UF = this.UF.Text;
+            if(this.Cidade != null)
+                _fazenda.Cidade = this.Cidade.Text;
+            if(this.Bairro != null)
+                _fazenda.Bairro = this.Bairro.Text;
+            if(this.UF != null)
+                _fazenda.UF = this.UF.Text;
 
+            ViewModel.NextCommand.Execute(_fazenda);
             // chama proxima tela
-            await this.Navigation.PushAsync(new FazendaInfoContatoPage(_fazenda));
+            //await this.Navigation.PushAsync(new FazendaInfoContatoPage(_fazenda));
         }
     }
 }

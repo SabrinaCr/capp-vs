@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CottonApp.Views {
+namespace CottonApp.Views.ClientePages {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("D:\\_Estágio\\Xamarin\\CottonApp\\CottonApp\\CottonApp\\Views\\ClientePages\\ClientePage." +

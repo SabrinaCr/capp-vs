@@ -6,8 +6,8 @@
     <StackLayout Padding="30, 150, 30, 0" Spacing="20">
         <Entry x:Name="Login" Placeholder="Login ou Email"></Entry>
         <Entry x:Name="Senha" Placeholder="Senha" IsPassword="True"></Entry>
-        <Label x:Name="Registrar" Text="Não possui usuário registrado? Cadastre-se" ></Label>
+        <Label x:Name="Registrar" Text="       Não possui usuário registrado? Cadastre-se" ></Label>
 
-        <Button x:Name="Entrar" Text="Entrar" Style="{StaticResource button-save}" Clicked="EntrarClicked"></Button>
+        <Button x:Name="Entrar" Text="Entrar" Style="{StaticResource button-save}" Clicked="Button_OnEntrarClicked"></Button>
     </StackLayout>
 </ContentPage>

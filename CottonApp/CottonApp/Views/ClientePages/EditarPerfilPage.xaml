@@ -1,26 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CottonApp.Views.Cliente.EditarPerfilPage"
+             x:Class="CottonApp.Views.ClientePages.EditarPerfilPage"
              Title="Editar Perfil">
-
-    <ScrollView>
-        <StackLayout Padding="40, 20, 40, 0" Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
-            <Entry x:Name="Nome" Placeholder="Nome Completo do Cliente"></Entry>
-            <Entry x:Name="Telefone" Placeholder="Tel: (XX) XXXXX-XXXX"></Entry>
-            <Entry x:Name="CPF" Placeholder="CPF" Keyboard="Numeric"></Entry>
-            <Entry x:Name="Logradouro" Placeholder="Logradouro"></Entry>
-            <Entry x:Name="Bairro" Placeholder="Bairro"></Entry>
-            <Entry x:Name="Numero" Placeholder="Número" Keyboard="Numeric"></Entry>
-            <Entry x:Name="Cidade" Placeholder="Cidade"></Entry>
-            <Entry x:Name="CEP" Placeholder="CEP"></Entry>
-            <Entry x:Name="UF" Placeholder="UF"></Entry>
-
-            <Button x:Name="Salvar" Text="Salvar" Style="{StaticResource button-save}" Clicked="SalvarClicked"></Button>
-
-            <ListView x:Name="Lista">
-            </ListView>
-        </StackLayout>
-    </ScrollView>
-    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10">
+                <Label x:Name="LabelDadosPessoais" Style="{StaticResource label-dados-pessoais}" Text="      Dados Pessoais"></Label>
+                <StackLayout Spacing="10" Padding="30, 5, 30, 10">
+                    <Entry x:Name="Nome" Placeholder="Nome Completo"  Text="{Binding Cliente.Nome}" Style="{StaticResource entry-formulario}"></Entry>
+                    <Entry x:Name="Telefone" Placeholder="Tel: (XX) XXXXX-XXXX" Text="{Binding Cliente.Telefone}" Style="{StaticResource entry-formulario}"></Entry>
+                    <Entry x:Name="CPF" Placeholder="CPF" Keyboard="Numeric" Text="{Binding Cliente.CPF}" Style="{StaticResource entry-formulario}"></Entry>
+                </StackLayout>
+                <Label x:Name="LabelDadosLocalizacao" Style="{StaticResource label-dados-pessoais}" Text="      Dados de Localização"></Label>
+                <StackLayout Spacing="10" Padding="30, 5, 30, 10">
+                    <Entry x:Name="Logradouro" Placeholder="Logradouro" Text="{Binding Cliente.Logradouro}" Style="{StaticResource entry-formulario}"></Entry>
+                    <Entry x:Name="Bairro" Placeholder="Bairro" Text="{Binding Cliente.Bairro}" Style="{StaticResource entry-formulario}"></Entry>
+                    <Entry x:Name="Numero" Placeholder="Número" Text="{Binding Cliente.Numero}" Keyboard="Numeric" Style="{StaticResource entry-formulario}"></Entry>
+                    <Entry x:Name="Cidade" Placeholder="Cidade" Text="{Binding Cliente.Cidade}" Style="{StaticResource entry-formulario}"></Entry>
+                    <Entry x:Name="CEP" Placeholder="CEP" Text="{Binding Cliente.CEP}" Style="{StaticResource entry-formulario}"></Entry>
+                    <Entry x:Name="UF" Placeholder="UF" Text="{Binding Cliente.UF}" Style="{StaticResource entry-formulario}"></Entry>
+                </StackLayout>
+                <Button x:Name="Salvar" Text="Salvar" Style="{StaticResource button-save}" Clicked="SalvarClicked"></Button>
+                <Button x:Name="ExcluirConta" Text="Excluir Minha Conta" Style="{StaticResource button-delete}" Clicked="ExcluirClicked"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>

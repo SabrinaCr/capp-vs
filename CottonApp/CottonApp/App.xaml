@@ -46,6 +46,18 @@
                 <Setter Property="TextColor" Value="#293546" />
                 <Setter Property="BackgroundColor" Value="#ffffff"/>
             </Style>
+
+            <!-- Label Dados Pessoais Formulário -->
+            <Style x:Key="label-dados-pessoais" TargetType="Label">
+                <Setter Property="BackgroundColor" Value="#dde0ec"/>
+                <Setter Property="TextColor" Value="#989aa3"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+
+            <!-- Entry Formulário Edição -->
+            <Style x:Key="entry-formulario" TargetType="Entry">
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
         </ResourceDictionary>
 
 	</Application.Resources>

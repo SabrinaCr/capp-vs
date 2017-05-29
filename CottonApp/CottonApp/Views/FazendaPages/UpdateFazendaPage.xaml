@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CottonApp.Views.FazendaPages.UpdateFazendaPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10">
+                <Label x:Name="LabelInformacoesBasicas" Style="{StaticResource label-dados-pessoais}" Text="      Informações Básicas"></Label>
+                <StackLayout Padding="20, 10, 20, 10" Spacing="20">
+                    <Entry x:Name="Nome" Placeholder="Nome da Fazenda" Text="{Binding Fazenda.Nome}"></Entry>
+                    <Entry x:Name="Hectares" Placeholder="Hectares" Keyboard="Numeric" Text="{Binding Fazenda.Hectares}"></Entry>
+                    <Entry x:Name="Observacoes" Placeholder="Observações" Text="{Binding Fazenda.Observacoes}"></Entry>
+                </StackLayout>
+                <Label x:Name="LabelInformacoesLocalizacao" Style="{StaticResource label-dados-pessoais}" Text="      Informações de Localização"></Label>
+                <StackLayout Padding="20, 10, 20, 10" Spacing="20">
+                    <Entry x:Name="Bairro" Placeholder="Bairro" Text="{Binding Fazenda.Bairro}"></Entry>
+                    <Entry x:Name="Cidade" Placeholder="Cidade" Text="{Binding Fazenda.Cidade}"></Entry>
+                    <Entry x:Name="UF" Placeholder="UF" Text="{Binding Fazenda.UF}"></Entry>
+                </StackLayout>
+                <Label x:Name="LabelInformacoesContato" Style="{StaticResource label-dados-pessoais}" Text="      Informações de Contato"></Label>
+                <StackLayout Padding="20, 70, 20, 10" Spacing="20">
+                    <Entry x:Name="Email" Placeholder="Email" Keyboard="Email" Text="{Binding Fazenda.Email}"/>
+                    <Entry x:Name="EnderecoWeb" Placeholder="Endereço Web" Text="{Binding Fazenda.EnderecoWeb}"/>
+                    <Entry x:Name="Telefone" Placeholder="Telefone" Keyboard="Telephone" Text="{Binding Fazenda.Telefone}"/>
+
+                </StackLayout>
+                <Button x:Name="Salvar" Text="Salvar" Style="{StaticResource button-save}" Clicked="SalvarClicked"></Button>
+                <Button x:Name="ExcluirConta" Text="Excluir Fazenda" Style="{StaticResource button-delete}" Clicked="ExcluirClicked"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

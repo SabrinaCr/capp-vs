@@ -1,32 +1,49 @@
->> Gerenciar Cliente
->> validações
- - se existe algum cliente com o mesmo login
- - na interface de cadastro, adicionar entry para confirmar senha
-
-23-05 FOCO NO CLIENTE E NO LOGIN
--- 
--- arrumar interface
-
->>-------------------------
+---------------------------
 >>    Tela Inicial
 >>-------------------------
 - Fazer tela de Boas-Vindas ou Algo do tipo
 - Naquela master que fica em branco, acrescentar os menus
 
-
 >> ------------------------
 >>   Clientes e Login
 >>-------------------------
+- não deixar digitar UF maior que 2, validar cep,
+- Atualizar email e senha
+- Fazer Validações
+- Validar CPF, Telefone
 - Controle de Sessão para Cliente não logar toda hora
 - Ajustar tela de Cadastro
-- Fazer Validações
-  - tá cadastrando cliente nulo, não pode
-- se existe algum cliente com o mesmo login
-- na interface de cadastro, adicionar entry para confirmar senha
-
-- Alterar Informações do Cliente
-- Cliente deve ser único; validaçãos para constraint unique
 
 >> Algumas Verificações:
 - dá pra ver o 
 - se o usuário já logou, oculta o cadastro de cliente
+
+>>-------------------------
+>>    Cadastro Fazenda
+>>-------------------------
+- Problemas de Navegação - Exclusão volta infinitamente para - Após 
+- Verificar validações
+- Filtrar Fazenda
+- Hectares : aceita 8.9084849 não pode, neah?
+- Cadastrar Talhão Para a Fazenda
+
+>> Cliente OK:
+- Sair
+- excluir conta
+- Alterar Informações do Cliente
+- Cliente deve ser único; validaçãos para constraint unique
+- Não tá atualizando cliente
+- se existe algum cliente com o mesmo login
+- se existe algum cliente com o mesmo email
+- na interface de cadastro, adicionar entry para confirmar senha
+- Excluir Conta
+- tá cadastrando cliente nulo, não pode
+- validar tamanho da senha
+- validar email (contém @ e .)
+
+>> Fazenda OK:
+- Erro no Cadastro de Fazenda : campos nulos
+- Ajustar Tela de Informações de Localização
+- Listar Fazendas
+- Tela de Alterar
+- Quando seleciona fazenda vai para a tela de alterar

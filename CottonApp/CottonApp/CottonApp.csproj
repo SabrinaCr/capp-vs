@@ -35,15 +35,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AcessoDadosFazenda.cs" />
-    <Compile Include="AcessoDadosCliente.cs" />
+    <Compile Include="Services\GetDatabaseFazenda.cs" />
+    <Compile Include="Services\GetDatabaseCliente.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Fazenda.cs" />
     <Compile Include="Models\ItemMenuLateral.cs" />
     <Compile Include="Models\Talhao.cs" />
-    <Compile Include="ViewModels\ClienteVM.cs" />
+    <Compile Include="Services\CottonAppApiService.cs" />
+    <Compile Include="Services\ICottonAppApiService.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\ClienteViewModel.cs" />
+    <Compile Include="ViewModels\EditarPerfilViewModel.cs" />
+    <Compile Include="ViewModels\FazendaInfoContatoViewModel.cs" />
+    <Compile Include="ViewModels\FazendaInfoLocalizacaoViewModel.cs" />
+    <Compile Include="ViewModels\FazendaListaViewModel.cs" />
+    <Compile Include="ViewModels\FazendaViewModel.cs" />
+    <Compile Include="ViewModels\HomePageViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\MasterViewModel.cs" />
+    <Compile Include="ViewModels\UpdateFazendaViewModel.cs" />
+    <Compile Include="Views\BasePage.cs" />
     <Compile Include="Views\ClientePages\EditarPerfilPage.xaml.cs">
       <DependentUpon>EditarPerfilPage.xaml</DependentUpon>
     </Compile>
@@ -53,8 +67,14 @@
     <Compile Include="Views\FazendaPages\FazendaInfoLocalizacaoPage.xaml.cs">
       <DependentUpon>FazendaInfoLocalizacaoPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\FazendaPages\FazendaListaPage.xaml.cs">
+      <DependentUpon>FazendaListaPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\FazendaPages\FazendaPage.xaml.cs">
       <DependentUpon>FazendaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FazendaPages\UpdateFazendaPage.xaml.cs">
+      <DependentUpon>UpdateFazendaPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\HomePage\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -89,7 +109,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\" />
+    <EmbeddedResource Include="Views\FazendaPages\FazendaListaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLite.Net, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -162,6 +185,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\HomePage\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\FazendaPages\UpdateFazendaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

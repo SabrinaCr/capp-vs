@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace CottonApp
+namespace CottonApp.Views.MasterDetail
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Detail : ContentPage

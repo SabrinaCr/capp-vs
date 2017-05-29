@@ -3,15 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CottonApp.Views.FazendaPages.FazendaPage"
              Title="Cadastrar Fazenda">
-
-    <StackLayout Padding="20, 70, 20, 0" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
-        <Entry x:Name="Nome" Placeholder="Nome da Fazenda"></Entry>
-        <Entry x:Name="Hectares" Placeholder="Hectares" Keyboard="Numeric"></Entry>
-        <Entry x:Name="Observacoes" Placeholder="Observações"></Entry>
-        
-        <Button x:Name="Proximo" Text="Proximo" Style="{StaticResource button-save}" Clicked="ProximoClicked"></Button>
-
-        <ListView x:Name="Lista">
-        </ListView>
-    </StackLayout>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="LabelInformacoesBasicas" Style="{StaticResource label-dados-pessoais}" Text="      Informações Básicas"></Label>
+            <StackLayout Padding="20, 70, 20, 10" Spacing="20">
+                <Entry x:Name="Nome" Placeholder="Nome da Fazenda"></Entry>
+                <Entry x:Name="Hectares" Placeholder="Hectares" Keyboard="Numeric"></Entry>
+                <Entry x:Name="Observacoes" Placeholder="Observações"></Entry>
+            </StackLayout>
+            <StackLayout Padding="40, 20, 40, 20">
+                <Button x:Name="Proximo" Text="Próximo" Style="{StaticResource button-save}" Clicked="ProximoClicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
